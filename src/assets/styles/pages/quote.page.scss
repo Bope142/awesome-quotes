@@ -1,0 +1,45 @@
+@import "../main.style/variable.scss";
+
+#quote__page {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 25px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding-top: 45px;
+}
+
+#quote__page .tools__action {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  position: fixed;
+  right: 10px;
+  top: 20%;
+}
+
+#quote__page .quote__view {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-self: center;
+  padding-right: 55px;
+  overflow: hidden;
+  & .qoute__category,
+  .quote__author {
+    font-size: 1rem;
+    opacity: 0.8;
+  }
+  & .qoute__text {
+    font-family: $font_PoetsenOne;
+    font-size: 1.5rem;
+    text-align: justify;
+    line-height: 1.8rem;
+    overflow-y: scroll;
+  }
+  & .controll__quotes {
+    display: flex;
+    gap: 20px;
+    padding: 10px 2px;
+  }
+}

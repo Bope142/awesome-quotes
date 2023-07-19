@@ -38,3 +38,12 @@ body {
   justify-content: space-between;
   padding: 25px 10px;
 }
+
+.main__view__page {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.container__page_app {
+  padding: 25px 0;
+}

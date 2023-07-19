@@ -1,0 +1,21 @@
+@import "../main.style/variable.scss";
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  flex: none;
+  background: $neutral_1;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  & svg {
+    height: 1.2rem;
+    width: 1.2rem;
+    & * {
+      fill: $neutral_2;
+    }
+  }
+}
