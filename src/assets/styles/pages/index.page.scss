@@ -1,0 +1,10 @@
+@import "../main.style/main.scss";
+.container {
+  height: 100%;
+  font-family: $font_regular;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}

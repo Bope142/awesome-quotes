@@ -1,0 +1,56 @@
+@import "./reset.scss";
+@import "./variable.scss";
+
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+body {
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  font-family: $font_Kaushan;
+}
+
+* {
+  user-select: none !important;
+  text-decoration: none !important;
+  outline: none !important;
+}
+#root {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.App {
+  background: rgb(255, 255, 255);
+  width: 100%;
+  height: 100vh;
+}
+
+.container__app {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 25px;
+}
+
+.main__view__page {
+  background: white;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 25px;
+}
+.page__setcion {
+  overflow: hidden;
+  background: rgb(255, 255, 255);
+  height: 100%;
+  margin-top: 10px;
+  overflow-y: scroll;
+  padding: 10px;
+  padding-top: 10px;
+}
