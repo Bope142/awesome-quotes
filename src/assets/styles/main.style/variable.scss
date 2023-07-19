@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "KaushanScript";
+  src: url("../../fonts/KaushanScript.ttf");
+}
+@font-face {
+  font-family: "KeaniaOne";
+  src: url("../../fonts/KeaniaOne.ttf");
+}
+
+@font-face {
+  font-family: "PoetsenOne";
+  src: url("../../fonts/PoetsenOne.ttf");
+}
+
+$font_Kaushan: "KaushanScript", "sans-serif";
+$font_Keania: "KeaniaOne", "sans-serif";
+$font_PoetsenOne: "PoetsenOne", "sans-serif";
+$neutral_1: #000000;
+$neutral_2: #ffffff;
+$neutral_3: rgba(#000000, 0.2);
+
+$padding__section: 100px;
