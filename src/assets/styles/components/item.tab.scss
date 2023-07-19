@@ -1,0 +1,61 @@
+@import "../main.style/variable.scss";
+
+.tab__item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s linear;
+
+  & * {
+    transition: all 0.5s linear;
+  }
+}
+.tab__item .icons__tab_item {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+  flex: none;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: 2px solid $neutral_2;
+  background: $neutral_1;
+  cursor: pointer;
+  & svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    flex: none;
+  }
+}
+
+.tab__item .tab__title {
+  text-align: center;
+  align-self: center;
+  font-family: $font_Keania;
+  color: $neutral_2;
+  font-size: 14px;
+  transition-delay: 0.3s;
+}
+
+.active_tab {
+  transform: translateY(-30%);
+}
+.ctive_tab .icons__tab_item {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px !important;
+}
+
+.inactive_tab {
+  transform: translateY(18%);
+}
+.inactive_tab .icons__tab_item {
+  border-color: transparent !important;
+}
+
+.inactive_tab .tab__title {
+  transition: all 0.1s linear !important;
+  opacity: 0;
+  visibility: hidden;
+}

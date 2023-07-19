@@ -1,0 +1,11 @@
+@import "../main.style/variable.scss";
+
+.tabbar-controll {
+  background: $neutral_1;
+  border-radius: 40px;
+  padding: 2px 30px;
+  display: flex;
+  justify-content: space-between;
+  overflow: visible;
+  background-color: $neutral_1;
+}
