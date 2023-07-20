@@ -23,7 +23,7 @@
   flex-direction: column;
   row-gap: 20px;
   align-self: center;
-  padding-right: 55px;
+  padding-right: 45px;
   overflow: hidden;
   & .qoute__category,
   .quote__author {
@@ -32,10 +32,9 @@
   }
   & .qoute__text {
     font-family: $font_PoetsenOne;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     text-align: justify;
-    line-height: 1.8rem;
-    overflow-y: scroll;
+    line-height: 2rem;
   }
   & .controll__quotes {
     display: flex;

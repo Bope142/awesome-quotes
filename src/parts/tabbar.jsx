@@ -7,9 +7,37 @@ import { ReactComponent as about_icons } from "../assets/icons/workspace.svg";
 
 export default class Tabbar extends React.Component {
   componentDidMount() {
-    document.querySelectorAll(".tab__item")[0].classList.add("active_tab");
-    document.querySelectorAll(".tab__item")[1].classList.add("inactive_tab");
-    document.querySelectorAll(".tab__item")[2].classList.add("inactive_tab");
+    switch (window.location.pathname) {
+      case "/":
+        document.querySelectorAll(".tab__item")[0].classList.add("active_tab");
+        document
+          .querySelectorAll(".tab__item")[1]
+          .classList.add("inactive_tab");
+        document
+          .querySelectorAll(".tab__item")[2]
+          .classList.add("inactive_tab");
+        break;
+      case "/category":
+        document.querySelectorAll(".tab__item")[1].classList.add("active_tab");
+        document
+          .querySelectorAll(".tab__item")[0]
+          .classList.add("inactive_tab");
+        document
+          .querySelectorAll(".tab__item")[2]
+          .classList.add("inactive_tab");
+        break;
+      case "/about":
+        document.querySelectorAll(".tab__item")[2].classList.add("active_tab");
+        document
+          .querySelectorAll(".tab__item")[1]
+          .classList.add("inactive_tab");
+        document
+          .querySelectorAll(".tab__item")[0]
+          .classList.add("inactive_tab");
+        break;
+      default:
+        break;
+    }
   }
   render() {
     return (

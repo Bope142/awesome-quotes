@@ -1,0 +1,23 @@
+@import "../main.style/main.scss";
+
+.category__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: none;
+  padding: 15px 30px;
+  border: 2px solid $neutral_1;
+  background: $neutral_2;
+  color: $neutral_1;
+  font-size: 1rem;
+  font-family: $font_PoetsenOne;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.selected_category {
+  background: $neutral_1;
+  color: $neutral_2;
+}
