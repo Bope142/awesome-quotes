@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/styles/pages/quote.page.scss";
-import ButtonIcons from "../components/ButtonIcons";
+import { ButtonIcons } from "../components/ButtonIcons";
 import { ReactComponent as copy_icons } from "../assets/icons/copy.svg";
 import { ReactComponent as downloads_icons } from "../assets/icons/downloads.svg";
 import { ReactComponent as share_icons } from "../assets/icons/share.svg";
