@@ -10,7 +10,7 @@ export default function QuotePage(props) {
   return (
     <main className="container__page_app" id="quote__page">
       <div className="quote__view">
-        <h1 className="qoute__category">Money</h1>
+        <h1 className="qoute__category">{props.content.category}</h1>
         <p className="qoute__text">
           What counts in Hollywood is box office. It doesn't really matter what
           people think of you as an actor because, as long as you have been in a

@@ -7,49 +7,31 @@ import { ReactComponent as about_icons } from "../assets/icons/workspace.svg";
 
 export default class Tabbar extends React.Component {
   componentDidMount() {
-    switch (window.location.pathname) {
-      case "/":
-        document.querySelectorAll(".tab__item")[0].classList.add("active_tab");
-        document
-          .querySelectorAll(".tab__item")[1]
-          .classList.add("inactive_tab");
-        document
-          .querySelectorAll(".tab__item")[2]
-          .classList.add("inactive_tab");
-        break;
-      case "/category":
-        document.querySelectorAll(".tab__item")[1].classList.add("active_tab");
-        document
-          .querySelectorAll(".tab__item")[0]
-          .classList.add("inactive_tab");
-        document
-          .querySelectorAll(".tab__item")[2]
-          .classList.add("inactive_tab");
-        break;
-      case "/about":
-        document.querySelectorAll(".tab__item")[2].classList.add("active_tab");
-        document
-          .querySelectorAll(".tab__item")[1]
-          .classList.add("inactive_tab");
-        document
-          .querySelectorAll(".tab__item")[0]
-          .classList.add("inactive_tab");
-        break;
-      default:
-        break;
+    if (window.location.pathname.search("category") === 1) {
+      document.querySelectorAll(".tab__item")[0].classList.add("inactive_tab");
+      document.querySelectorAll(".tab__item")[1].classList.add("active_tab");
+      document.querySelectorAll(".tab__item")[2].classList.add("inactive_tab");
+    } else if (window.location.pathname.search("about") === 1) {
+      document.querySelectorAll(".tab__item")[0].classList.add("inactive_tab");
+      document.querySelectorAll(".tab__item")[1].classList.add("inactive_tab");
+      document.querySelectorAll(".tab__item")[2].classList.add("active_tab");
+    } else {
+      document.querySelectorAll(".tab__item")[0].classList.add("active_tab");
+      document.querySelectorAll(".tab__item")[1].classList.add("inactive_tab");
+      document.querySelectorAll(".tab__item")[2].classList.add("inactive_tab");
     }
   }
   render() {
     return (
       <div className="tabbar-controll">
         <ItemTabbar
-          pathLink="/"
+          pathLink={"/" + this.props.category}
           icons={quote_icons}
           titleTab="Quotes"
           indexClassList={0}
         />
         <ItemTabbar
-          pathLink="/category"
+          pathLink={"/category/" + this.props.category}
           icons={category_icons}
           titleTab="Category"
           indexClassList={1}
