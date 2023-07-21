@@ -8,7 +8,7 @@ export default function MainView(props) {
   return (
     <div className="main__view__page">
       <Routes>
-        <Route path="/:category" element={<QuotePage content={props} />} />
+        <Route path="/" element={<QuotePage content={props} />} />
         <Route
           path="/category/:current_category"
           element={<CategoryPage content={props} />}

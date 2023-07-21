@@ -25,7 +25,7 @@ export default class Tabbar extends React.Component {
     return (
       <div className="tabbar-controll">
         <ItemTabbar
-          pathLink={"/" + this.props.category}
+          pathLink={"/"}
           icons={quote_icons}
           titleTab="Quotes"
           indexClassList={0}

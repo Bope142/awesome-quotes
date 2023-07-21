@@ -29,9 +29,13 @@
   .quote__author {
     font-size: 1rem;
     opacity: 0.8;
+    transition: all 0.3s linear;
   }
-  & .qoute__text {
-    font-family: $font_PoetsenOne;
+  & .quote__author {
+    opacity: 0;
+  }
+  & .content__qoute__text {
+    font-family: $font_PoetsenOne !important;
     font-size: 1.6rem;
     text-align: justify;
     line-height: 2rem;
@@ -40,5 +44,7 @@
     display: flex;
     gap: 20px;
     padding: 10px 2px;
+    opacity: 0;
+    transition: all 0.3s linear;
   }
 }

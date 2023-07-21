@@ -7,17 +7,17 @@ class App extends React.Component {
     currentCategory: "money",
   };
   changeCategory = (category) => {
-    this.setState({ current_category: category });
+    this.setState({ currentCategory: category });
   };
 
   render() {
     return (
       <div className="App container__app">
         <MainView
-          category={this.state.current_category}
+          category={this.state.currentCategory}
           onDataChange={this.changeCategory}
         />
-        <Tabbar category={this.state.current_category} />
+        <Tabbar category={this.state.currentCategory} />
       </div>
     );
   }
