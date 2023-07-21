@@ -12,7 +12,10 @@ const eventClickHandler = (indexComponentClassList) => {
 export default function ItemTabbar(props) {
   return (
     <Link
-      to={props.pathLink}
+      to={{
+        pathname: props.pathLink,
+        state: { id: 1, name: "sabaoon", shirt: "green" },
+      }}
       className="tab__item"
       onClick={(e) => {
         eventClickHandler(props.indexClassList);
