@@ -36,4 +36,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 100px;
+}
+
+@media only screen and (max-width: 700px) {
+  .App__container {
+    padding: 30px;
+  }
 }

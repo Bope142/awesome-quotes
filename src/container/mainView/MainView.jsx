@@ -12,7 +12,7 @@ function MainView() {
         <Route path="/" element={<HomePage />} />
         <Route path="/category/" element={<CategoryPage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/favorite" element={<FavoriteQuotesPage />} />
+        <Route path="/favorites" element={<FavoriteQuotesPage />} />
       </Routes>
       <Outlet />
     </main>
