@@ -1,1 +1,35 @@
 @import "../../assets/styles/main.style.scss";
+
+.home__page {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 50px;
+}
+
+.quote__actions {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.quote__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+  & .quote__category,
+  .quote__author {
+    font-size: 1.2rem;
+    opacity: 0.8;
+  }
+  & .quote__text {
+    font-size: 3rem;
+  }
+}
+
+.navigation__quote_list {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}

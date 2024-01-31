@@ -26,7 +26,6 @@ const ContainerNavigationQoute = () => {
 const ContainerViewQuote = () => {
   return (
     <>
-      {" "}
       <p className="quote__category">Money Qoutes</p>
       <p className="quote__text">
         Genius is one percent inspiration and ninety-nine percent perspiration
