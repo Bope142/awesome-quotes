@@ -1,12 +1,12 @@
 import React from "react";
 import "./assets/styles/main.style.scss";
+import MainView from "./container/mainView/MainView";
+import Tabbar from "./components/tabbar/Tabbar";
 function App() {
   return (
     <div className="App__container">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora enim
-      repudiandae labore sint, debitis aperiam, laboriosam, accusamus amet
-      accusantium excepturi rem. Quae perspiciatis dicta illum cupiditate
-      molestiae facilis eveniet commodi!
+      <MainView />
+      <Tabbar />
     </div>
   );
 }
