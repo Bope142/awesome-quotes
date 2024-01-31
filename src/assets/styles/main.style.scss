@@ -7,6 +7,24 @@
 *::-webkit-scrollbar {
   display: none;
 }
+::-webkit-scrollbar {
+  background-color: rgba(0, 0, 0, 0.007);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.041);
+  border-radius: 6px;
+  width: 2;
+}
+
+scrollbar {
+  background-color: #222;
+}
+
+scrollbar-track {
+  background-color: rgba(12, 124, 31, 0);
+}
+
 body {
   height: 100vh;
   background: rgb(1, 0, 0);
@@ -36,7 +54,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 100px;
+  padding: 80px;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 700px) {

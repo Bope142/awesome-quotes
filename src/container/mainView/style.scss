@@ -1,1 +1,7 @@
 @import "../../assets/styles/main.style.scss";
+.main__view__page {
+  overflow: hidden;
+  overflow-y: scroll;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+}

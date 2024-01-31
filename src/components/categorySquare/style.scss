@@ -1,0 +1,14 @@
+@import "../../assets/styles/main.style.scss";
+
+.square__category {
+  padding: 10px 30px;
+  border: 2px solid $neutral_1;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.select-category {
+  background: $neutral_1;
+  color: $neutral_2;
+}
