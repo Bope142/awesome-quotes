@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.scss";
-import { FaCircleChevronLeft } from "react-icons/fa6";
-import { FaChevronCircleRight } from "react-icons/fa";
 import Button from "../../components/button/Button";
 import { FaCopy } from "react-icons/fa";
 import { BiSolidLike } from "react-icons/bi";
 import { FaShareAlt } from "react-icons/fa";
+import { connect } from "react-redux";
+import { fetchQuotes } from "../../redux/actions/actionFetchQuotes";
+import { VscRefresh } from "react-icons/vsc";
 const ContainerActionsQuote = () => {
   return (
     <div className="quote__actions">
@@ -15,35 +16,65 @@ const ContainerActionsQuote = () => {
     </div>
   );
 };
-const ContainerNavigationQoute = () => {
+const ContainerNavigationQoute = ({ refreshQuoteEvent }) => {
+  const refreshQuote = () => {
+    refreshQuoteEvent(localStorage.getItem("categoryQuote"));
+  };
   return (
     <div className="navigation__quote_list">
-      <Button idBtn="#btn-prev-quote" Icons={<FaCircleChevronLeft />} />
-      <Button idBtn="#btn-next-quote" Icons={<FaChevronCircleRight />} />
+      <Button
+        idBtn="#btn-next-quote"
+        Icons={<VscRefresh />}
+        handleEvent={refreshQuote}
+      />
     </div>
   );
 };
-const ContainerViewQuote = () => {
+const ContainerViewQuote = ({ data }) => {
+  const { fetchedQuotes } = data;
   return (
     <>
-      <p className="quote__category">Money Qoutes</p>
-      <p className="quote__text">
-        Genius is one percent inspiration and ninety-nine percent perspiration
-      </p>
-      <p className="quote__author">- Thomas Edjison</p>
+      <p className="quote__category">{fetchedQuotes[0].category} Qoutes</p>
+      <p className="quote__text">{fetchedQuotes[0].quote}</p>
+      <p className="quote__author">{fetchedQuotes[0].author}</p>
     </>
   );
 };
-function HomePage() {
-  return (
-    <main className="home__page">
-      <div className="quote__content">
-        <ContainerViewQuote />
-        <ContainerNavigationQoute />
-      </div>
-      <ContainerActionsQuote />
-    </main>
-  );
+function HomePage({ quote, fetchQuote }) {
+  useEffect(() => {
+    fetchQuote(localStorage.getItem("categoryQuote"));
+  }, [fetchQuote]);
+  const quoteContainer =
+    quote.fetchedQuotes.length > 0 ? (
+      <main className="home__page">
+        <div className="quote__content">
+          {" "}
+          <ContainerViewQuote data={quote} />
+          <ContainerNavigationQoute
+            refreshQuoteEvent={fetchQuote}
+            loading={quote}
+          />
+        </div>
+        <ContainerActionsQuote />
+      </main>
+    ) : (
+      <main className="home__page">
+        <div className="loader"></div>
+      </main>
+    );
+  return quoteContainer;
 }
 
-export default HomePage;
+const mapStateToProps = (state) => {
+  return {
+    quote: state.quotes,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchQuote: (category) => dispatch(fetchQuotes(category)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
