@@ -33,7 +33,7 @@ const ContainerActionsQuote = ({ data }) => {
   const shareOnSocialMedia = async () => {
     const quoteText = fetchedQuotes[0].quote;
     const quoteAuthor = fetchedQuotes[0].author;
-    const quoteLink = "https://secure-password-generator-web.netlify.app/";
+    const quoteLink = "https://awesome-quotes.vercel.app/";
     const shareMessage = `"${quoteText}" - ${quoteAuthor} | By AwesomeQuote-app\n\n${quoteLink}`;
 
     try {
@@ -105,7 +105,12 @@ const ContainerViewQuote = ({ data }) => {
 };
 function HomePage({ quote, fetchQuote }) {
   useEffect(() => {
-    fetchQuote(localStorage.getItem("categoryQuote"));
+    if (!localStorage.getItem("categoryQuote")) {
+      localStorage.setItem("categoryQuote", "god");
+      fetchQuote("god");
+    } else {
+      fetchQuote(localStorage.getItem("categoryQuote"));
+    }
   }, []);
 
   const quoteContainer =

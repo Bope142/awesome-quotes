@@ -5,7 +5,7 @@ import Tabbar from "./components/tabbar/Tabbar";
 function App() {
   useEffect(() => {
     if (!localStorage.getItem("categoryQuote")) {
-      localStorage.setItem("categoryQuote", "money");
+      localStorage.setItem("categoryQuote", "god");
     }
   }, []);
 
