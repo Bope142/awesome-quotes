@@ -5,10 +5,9 @@ import { FaCopy } from "react-icons/fa";
 import { FaShareAlt } from "react-icons/fa";
 import { connect } from "react-redux";
 import { fetchQuotes } from "../../redux/actions/actionFetchQuotes";
-import { VscRefresh } from "react-icons/vsc";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import { RiRefreshFill } from "react-icons/ri";
 const copyToClipboard = async (text) => {
   try {
     const permissions = await navigator.permissions.query({
@@ -88,7 +87,7 @@ const ContainerNavigationQoute = ({ refreshQuoteEvent }) => {
     <div className="navigation__quote_list">
       <Button
         idBtn="#btn-next-quote"
-        Icons={<VscRefresh />}
+        Icons={<RiRefreshFill />}
         handleEvent={refreshQuote}
       />
     </div>

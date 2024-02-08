@@ -23,7 +23,7 @@ function AboutPage() {
           title="go to github repository"
         />
         <ButtonLink
-          href="www.linkedin.com/in/norbert-yemuang-bope-69662318a"
+          href="https://www.linkedin.com/in/norbert-yemuang-bope-69662318a"
           Icons={<FaLinkedin />}
           title="go to my linkedin page"
         />
