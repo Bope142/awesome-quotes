@@ -30,6 +30,41 @@ const copyToClipboard = async (text) => {
 
 const ContainerActionsQuote = ({ data }) => {
   const { fetchedQuotes } = data;
+
+  const shareOnSocialMedia = async () => {
+    const quoteText = fetchedQuotes[0].quote;
+    const quoteAuthor = fetchedQuotes[0].author;
+    const quoteLink = "https://secure-password-generator-web.netlify.app/";
+    const shareMessage = `"${quoteText}" - ${quoteAuthor} | By AwesomeQuote-app\n\n${quoteLink}`;
+
+    try {
+      const permissions = await navigator.permissions.query({
+        name: "clipboard-write",
+      });
+
+      if (permissions.state === "granted" || permissions.state === "prompt") {
+        if (navigator.share) {
+          await navigator.share({
+            title: "Share Quote By AwesomeQuote ",
+            text: shareMessage,
+          });
+          console.log("Shared successfully");
+          toast.info("Quote shared successfully!");
+        } else {
+          console.log("Sharing not supported, opening fallback");
+          toast.info("Sharing not supported, opening fallback");
+        }
+      } else {
+        throw new Error(
+          "Can't access the clipboard. Check your browser permissions."
+        );
+      }
+    } catch (error) {
+      console.error("Error sharing:", error);
+      toast.error("Error sharing: " + error.message);
+    }
+  };
+
   return (
     <div className="quote__actions">
       <Button
@@ -37,7 +72,11 @@ const ContainerActionsQuote = ({ data }) => {
         Icons={<FaCopy />}
         handleEvent={() => copyToClipboard(fetchedQuotes[0].quote)}
       />
-      <Button idBtn="#btn-share-quote" Icons={<FaShareAlt />} />
+      <Button
+        idBtn="#btn-share-quote"
+        Icons={<FaShareAlt />}
+        handleEvent={shareOnSocialMedia}
+      />
     </div>
   );
 };

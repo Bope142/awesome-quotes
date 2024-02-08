@@ -16,6 +16,7 @@ const reducerFetchedQuotes = (state = initialState, action) => {
       return {
         ...state,
         isLoading: true,
+        fetchedQuotes: [],
       };
 
     case FETCH_QUOTES_SUCCESS:
