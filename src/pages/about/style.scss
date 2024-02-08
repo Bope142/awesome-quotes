@@ -1,0 +1,23 @@
+@import "../../assets/styles/main.style.scss";
+
+.about__page {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  align-items: center;
+  justify-content: center;
+  & blockquote {
+    font-size: 2rem;
+    text-align: center;
+  }
+  & .social__media {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  & .copy {
+    text-align: center;
+    opacity: 0.8;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,76 @@
+@import "./reset.scss";
+@import "./variable.scss";
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+::-webkit-scrollbar {
+  background-color: rgba(0, 0, 0, 0.007);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.041);
+  border-radius: 6px;
+  width: 2;
+}
+
+scrollbar {
+  background-color: #222;
+}
+
+scrollbar-track {
+  background-color: rgba(12, 124, 31, 0);
+}
+
+body {
+  height: 100vh;
+  background: rgb(255, 255, 255);
+  // overflow: hidden;
+  width: 100%;
+  font-family: $fontQouteFont;
+}
+
+* {
+  user-select: none !important;
+  text-decoration: none !important;
+  outline: none !important;
+  font-family: $fontQouteFont !important;
+}
+#root {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: rgb(255, 255, 255);
+}
+
+.App__container {
+  background: $neutral_2;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 80px;
+  overflow: hidden;
+}
+.Toastify__progress-bar {
+  background: white !important;
+}
+.Toastify__progress-bar--info {
+  background: white !important;
+}
+
+.Toastify__toast-icon svg * {
+  color: white !important;
+  fill: white !important;
+}
+
+@media only screen and (max-width: 700px) {
+  .App__container {
+    padding: 30px;
+  }
+}

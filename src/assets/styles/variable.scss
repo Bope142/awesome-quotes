@@ -1,0 +1,34 @@
+/*Export fonts */
+@font-face {
+  font-family: "QouteFont";
+  src: url("../fonts/QouteFont.otf");
+}
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("../fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("../fonts/Poppins-Medium.ttf");
+}
+
+/*fonts varialble*/
+$fontQouteFont: "QouteFont", sans-serif;
+
+$fontPoppinsBold: "Poppins-Bold", sans-serif;
+
+$fontPoppinsMedium: "Poppins-Medium", sans-serif;
+
+$fontPoppinsRegular: "Poppins-Regular", sans-serif;
+
+$neutral_1: #000000;
+$neutral_2: #ffffff;
+$neutral_3: rgba(#000000, 0.2);
+
+$padding__section: 100px;

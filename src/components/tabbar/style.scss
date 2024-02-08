@@ -1,0 +1,65 @@
+@import "../../assets/styles/main.style.scss";
+
+.tabbar-menu {
+  display: flex;
+  flex: none;
+  background: $neutral_1;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 20px;
+  width: 500px;
+}
+.active {
+  & .items__icons {
+    border-color: $neutral_2 !important;
+    transform: translateY(-50%) !important;
+  }
+  & .items__title {
+    transform: translateY(-95%) !important;
+    opacity: 1 !important;
+  }
+}
+.tabbar__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5px;
+  z-index: 50;
+  & .items__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    flex: none;
+    border: 2px solid transparent;
+    transition: all 0.3s linear;
+    background: $neutral_1;
+    transform: translateY(25%);
+    & .icons-items-tabbar {
+      height: 20px;
+      width: 20px;
+      color: $neutral_2 !important;
+      & * {
+        fill: $neutral_2 !important;
+      }
+    }
+  }
+  & .items__title {
+    color: $neutral_2;
+    font-size: 1.1rem;
+    transform: translateY(185%);
+    transition: all 0.3s linear;
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .tabbar-menu {
+    width: auto;
+  }
+}

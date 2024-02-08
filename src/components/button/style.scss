@@ -1,0 +1,21 @@
+@import "../../assets/styles/main.style.scss";
+
+.btn {
+  border: none;
+  outline: none;
+  background: $neutral_1;
+  padding: 15px;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  & svg {
+    height: 18px;
+    width: 18px;
+    color: $neutral_2 !important;
+    & * {
+      fill: $neutral_2 !important;
+    }
+  }
+}

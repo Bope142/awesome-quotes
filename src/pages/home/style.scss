@@ -1,0 +1,70 @@
+@import "../../assets/styles/main.style.scss";
+
+.home__page {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 50px;
+}
+
+.isLoading {
+  height: 200px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  overflow: hidden !important;
+  padding: 10px !important;
+}
+.quote__actions {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  position: fixed;
+  right: 30px;
+}
+
+.quote__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+  padding-right: 50px;
+  & .quote__category,
+  .quote__author {
+    font-size: 1.2rem;
+    opacity: 0.8;
+  }
+  & .quote__text {
+    font-size: 3rem;
+  }
+}
+
+.navigation__quote_list {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.loader {
+  width: fit-content;
+  font-size: 30px;
+  background: radial-gradient(circle closest-side, #000 94%, #0000)
+    right/calc(200% - 1em) 100%;
+  animation: l24 1s infinite alternate linear;
+}
+.loader::before {
+  content: "Loading Quote...";
+  line-height: 1em;
+  color: #0000;
+  background: inherit;
+  background-image: radial-gradient(circle closest-side, #fff 94%, #000);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 2.2rem;
+}
+
+@keyframes l24 {
+  100% {
+    background-position: left;
+  }
+}
