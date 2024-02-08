@@ -35,7 +35,7 @@ const ContainerViewQuote = ({ data }) => {
   return (
     <>
       <p className="quote__category">{fetchedQuotes[0].category} Qoutes</p>
-      <p className="quote__text">{fetchedQuotes[0].quote}</p>
+      <blockquote className="quote__text">{fetchedQuotes[0].quote}</blockquote>
       <p className="quote__author">{fetchedQuotes[0].author}</p>
     </>
   );

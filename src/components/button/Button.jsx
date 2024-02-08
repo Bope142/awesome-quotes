@@ -8,4 +8,12 @@ function Button({ idBtn, Icons, handleEvent }) {
   );
 }
 
+export const ButtonLink = ({ href, Icons, title }) => {
+  return (
+    <a href={href} className="btn btn-link" title={title}>
+      {Icons}
+    </a>
+  );
+};
+
 export default Button;
