@@ -3,7 +3,6 @@ import "./style.scss";
 import { NavLink } from "react-router-dom";
 import { FaQuoteLeft } from "react-icons/fa";
 import { BiSolidCategoryAlt } from "react-icons/bi";
-import { BiSolidLike } from "react-icons/bi";
 import { TiInfoLarge } from "react-icons/ti";
 const linkNavTabbar = [
   {
@@ -15,11 +14,6 @@ const linkNavTabbar = [
     label: "Category",
     icons: <BiSolidCategoryAlt className="icons-items-tabbar" />,
     path: "/category",
-  },
-  {
-    label: "Favorites",
-    icons: <BiSolidLike className="icons-items-tabbar" />,
-    path: "/favorites",
   },
   {
     label: "About",

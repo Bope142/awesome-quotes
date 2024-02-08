@@ -27,7 +27,7 @@ scrollbar-track {
 
 body {
   height: 100vh;
-  background: rgb(1, 0, 0);
+  background: rgb(255, 255, 255);
   // overflow: hidden;
   width: 100%;
   font-family: $fontQouteFont;
@@ -44,7 +44,7 @@ body {
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  background: rebeccapurple;
+  background: rgb(255, 255, 255);
 }
 
 .App__container {
@@ -56,6 +56,17 @@ body {
   justify-content: space-between;
   padding: 80px;
   overflow: hidden;
+}
+.Toastify__progress-bar {
+  background: white !important;
+}
+.Toastify__progress-bar--info {
+  background: white !important;
+}
+
+.Toastify__toast-icon svg * {
+  color: white !important;
+  fill: white !important;
 }
 
 @media only screen and (max-width: 700px) {
