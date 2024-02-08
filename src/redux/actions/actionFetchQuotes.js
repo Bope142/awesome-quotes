@@ -38,7 +38,7 @@ export const fetchQuotes = (category) => {
       })
       .then((response) => {
         const quoteItems = response.data;
-
+        console.log(response);
         dispatch(fetchQuotesSuccess(quoteItems));
       })
       .catch((error) => {

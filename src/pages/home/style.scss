@@ -6,6 +6,14 @@
   column-gap: 50px;
 }
 
+.isLoading {
+  height: 200px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  overflow: hidden !important;
+  padding: 10px !important;
+}
 .quote__actions {
   display: flex;
   flex-direction: column;
@@ -38,30 +46,25 @@
 }
 
 .loader {
-  width: 20px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: #000;
-  box-shadow: 0 0 0 0 #0004;
-  animation: l2 1.5s infinite linear;
-  position: relative;
-  transform: scale(3);
+  width: fit-content;
+  font-size: 30px;
+  background: radial-gradient(circle closest-side, #000 94%, #0000)
+    right/calc(200% - 1em) 100%;
+  animation: l24 1s infinite alternate linear;
 }
-.loader:before,
-.loader:after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  box-shadow: 0 0 0 0 #0004;
-  animation: inherit;
-  animation-delay: -0.5s;
+.loader::before {
+  content: "Loading Quote...";
+  line-height: 1em;
+  color: #0000;
+  background: inherit;
+  background-image: radial-gradient(circle closest-side, #fff 94%, #000);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 2.2rem;
 }
-.loader:after {
-  animation-delay: -1s;
-}
-@keyframes l2 {
+
+@keyframes l24 {
   100% {
-    box-shadow: 0 0 0 40px #0000;
+    background-position: left;
   }
 }

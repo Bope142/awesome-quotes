@@ -43,12 +43,12 @@ const ContainerViewQuote = ({ data }) => {
 function HomePage({ quote, fetchQuote }) {
   useEffect(() => {
     fetchQuote(localStorage.getItem("categoryQuote"));
-  }, [fetchQuote]);
+  }, []);
+  console.log(quote.fetchedQuotes.length);
   const quoteContainer =
     quote.fetchedQuotes.length > 0 ? (
       <main className="home__page">
         <div className="quote__content">
-          {" "}
           <ContainerViewQuote data={quote} />
           <ContainerNavigationQoute
             refreshQuoteEvent={fetchQuote}
@@ -58,7 +58,7 @@ function HomePage({ quote, fetchQuote }) {
         <ContainerActionsQuote />
       </main>
     ) : (
-      <main className="home__page">
+      <main className="home__page isLoading">
         <div className="loader"></div>
       </main>
     );
