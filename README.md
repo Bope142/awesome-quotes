@@ -8,7 +8,7 @@ Awesome Quotes is a web application built to provide users with a curated collec
 
 ## Demo
 
-You can check out the live demo [here](https://quote-hub-omega.vercel.app/).
+You can check out the live demo [here](https://awesome-quotes.vercel.app/).
 
 ## Features
 
